@@ -21,31 +21,27 @@ public class PersonController {
     @Autowired
     private PersonRepository repository;
 
+
+
+
     @PostMapping(value = "/", produces = "application/json")
-    public ResponseEntity<PersonDto> cadastrar(@RequestBody PersonDto person){
-        repository.save(new Person(person));
-        return new ResponseEntity<PersonDto>(HttpStatus.CREATED);
+    public ResponseEntity<Person> cadastrar(@RequestBody Person person){
+        return new ResponseEntity<>(HttpStatus.CREATED ,service.save(person));
     }
 
 
     //Esse método não está atualizando, apenas salvando um novo dto
     @PutMapping(value = "/", produces = "application/json")
     public ResponseEntity<PersonDto> atualizar(@RequestBody PersonDto person){
-        repository.save(new Person(person));
+        repository.save(new Person());
         return new ResponseEntity<PersonDto>(HttpStatus.OK);
-    }
 
-    @DeleteMapping(value = "/")
-    @ResponseBody
-    public ResponseEntity<String>delete(@RequestParam Long id){
-        repository.delete(id);
-        return new ResponseEntity<String>("Deleted with sucess", HttpStatus.OK);
     }
 
     //Deveria criar um método no service chamado getUserById, não lembro como fazer
     @GetMapping(value = "/{idUsuario}", produces = "application/json")
     public ResponseEntity<PersonDto> getUserById(@PathVariable(value = "id")Long id){
-         repository.getUserById(id);
+        repository.getUserById(id);
         return new ResponseEntity<PersonDto>(HttpStatus.OK);
     }
 

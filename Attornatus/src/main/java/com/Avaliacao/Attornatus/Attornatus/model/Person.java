@@ -1,6 +1,5 @@
 package com.Avaliacao.Attornatus.Attornatus.model;
 
-import com.Avaliacao.Attornatus.Attornatus.model.dto.PersonDto;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
@@ -16,19 +15,12 @@ public class Person implements Serializable {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_person")
     private Long id;
 
+    private String name;
     private LocalDate birhtDay;
     @ManyToOne
     @JoinColumn(name = "adress_ID")
     private Adress adress;
 
-    public Person() {
-    }
-
-    public Person(PersonDto person) {
-        this.id = person.getId();
-        this.birhtDay = person.getBirthDay();
-        this.adress = person.getAdress();
-    }
 
 
     public Long getId() {
@@ -55,6 +47,14 @@ public class Person implements Serializable {
         this.birhtDay = birhtDay;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -67,4 +67,6 @@ public class Person implements Serializable {
     public int hashCode() {
         return Objects.hash(id);
     }
+
+
 }

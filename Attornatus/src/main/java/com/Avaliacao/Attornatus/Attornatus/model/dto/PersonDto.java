@@ -7,6 +7,7 @@ import java.time.LocalDate;
 public class PersonDto {
 
     private Long id;
+    private String name;
     private LocalDate birthDay;
     private Adress adress;
 
@@ -32,5 +33,13 @@ public class PersonDto {
 
     public void setAdress(Adress adress) {
         this.adress = adress;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

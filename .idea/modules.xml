@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Attornatus/Attornatus.iml" filepath="$PROJECT_DIR$/Attornatus/Attornatus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Attortnatus-teste-tecnico.iml" filepath="$PROJECT_DIR$/.idea/Attortnatus-teste-tecnico.iml" />
+    </modules>
+  </component>
+</project>
