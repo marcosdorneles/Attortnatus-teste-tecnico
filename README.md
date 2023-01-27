@@ -7,4 +7,4 @@ R: Alguns critérios devem ser observados na implementação de uma nova funcion
 2.	Em qual etapa da implementação você considera a qualidade de software?
 
 R: A qualidade de software é uma tarefa perene, exigindo manutenções contínuas para a melhor performance do sistema. No entanto, durante a implementação de uma nova funcionalidade é importante considerar a análise dos requisitos solicitados, de modo que, durante a implementação do projeto todas as soluções propostas atendam aos requisitos necessários. Ainda, durante a implementação, faz-se necessário que o código seja documentado, legível e siga as boas práticas de documentação
-![image](https://user-images.githubusercontent.com/95898769/214853899-939a4fc2-67e3-4097-b572-e3b5153f54a5.png)
+
